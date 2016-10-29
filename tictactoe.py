@@ -101,7 +101,7 @@ printBoard(game)
 rst, winLost = game.isEndGame()
 while not rst:
     move = int(input("Press a number from 1 to 9 to make a move: ")) - 1
-    if move >= 1 and move <= 9 and game.isCanMove(1, move):
+    if move >= 0 and move <= 8 and game.isCanMove(1, move):
         game.move(1, move)
         print("You pressed " + str(move + 1) + ", now the new state is: ")
         printBoard(game)
